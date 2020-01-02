@@ -45,7 +45,17 @@
     display: flex;
     flex: 0 0 auto;
     flex-direction: column;
-    background-color: #f3f3f3;
+    background-color: #FFFFFF;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 1px;
+}
+.diagram-clone {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    background-color: #EEEEEE;
     position: relative;
     border: 1px solid black;
     border-radius: 3px;

@@ -77,4 +77,31 @@
             </div>
         </div>
     </div>
+
+    <div class="note">Read only diagram that represents the store</div>
+    <div
+    #diagramclone
+    class="diagram-clone"
+    [style.left.px]="diagramX"
+    [style.top.px]="diagramY"
+    [style.width.px]="diagramWidth"
+    [style.height.px]="diagramHeight"
+>
+    <ng-container
+        *ngFor="let shape of shapes$ | async; trackBy: shapeTrackBy"
+    >
+        <div
+            class="shape"
+            [style.width.px]="shape.metrics.width"
+            [style.height.px]="shape.metrics.height"
+            [style.left.px]="shape.metrics.x"
+            [style.top.px]="shape.metrics.y"
+            [style.background-color]="shape.backgroundColor"
+            [style.color]="shape.foregroundColor"
+        >
+            <div class="label">{{ shape.label }}</div>
+        </div>
+    </ng-container>
+</div>
+
 </div>
